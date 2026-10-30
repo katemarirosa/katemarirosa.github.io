@@ -29,3 +29,76 @@ h1,h2,h3{line-height:1.2;margin-top:0;color:var(--navy)}h1,h2{font-family:var(--
 @media(max-width:900px){.header-inner{align-items:flex-start}.main-nav{gap:10px}.main-nav a{font-size:12px}.hero{gap:25px}.timeline{grid-template-columns:repeat(3,1fr)}.activity-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.header-inner{padding:14px 18px;align-items:center}.menu-toggle{display:block}.main-nav{display:none;position:absolute;top:100%;left:0;right:0;padding:16px 22px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.main-nav.open{display:flex}.brand{font-size:21px}.section-wrap{padding:58px 20px}.hero{grid-template-columns:1fr;padding-top:45px;min-height:0}.hero-photo{min-height:300px;grid-row:1}.hero-photo img,.photo-placeholder{height:330px}.hero-copy{grid-row:2}.section-heading{display:block}.section-heading>p{margin-top:12px}.card-grid,.topic-grid,.publication-list,.activity-grid,.resource-grid,.about-grid,.contact-grid,.group-banner{grid-template-columns:1fr}.timeline{grid-template-columns:1fr 1fr}.about-grid,.contact-grid{gap:28px}.media-list article{grid-template-columns:90px 1fr;gap:12px}.callout{display:block}.callout .button{margin-top:18px}.footer-inner{grid-template-columns:1fr}.footer-inner small{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+/* Convites, imprensa e colaborações */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  padding: 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.service-card h3 {
+  font: 22px var(--serif);
+  margin: 14px 0 10px;
+}
+
+.service-card p,
+.calendar-area p,
+.playlist-area p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.service-card .button {
+  margin-top: 8px;
+}
+
+.calendar-area,
+.playlist-area {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: 36px;
+  padding: 42px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.calendar-area h3,
+.playlist-area h3 {
+  font: 25px var(--serif);
+}
+
+.calendar-embed {
+  width: 100%;
+  height: 440px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.playlist-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.bio-download {
+  margin-top: 32px;
+}
+
+@media (max-width: 680px) {
+  .service-grid,
+  .calendar-area,
+  .playlist-area {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-embed {
+    height: 380px;
+  }
+}
